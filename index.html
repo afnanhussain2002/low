@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,21 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://kit.fontawesome.com/fd30bb401a.js" crossorigin="anonymous"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sonali: '#B68C5A',
+          }
+        }
+      }
+    }
+  </script>
+  
 </head>
 <body class="font-mono">
-    <header>
+    <header class="container mx-auto">
           <nav>
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
@@ -36,27 +48,81 @@
                 </div>
                 <div class="navbar-center hidden lg:flex">
                   <ul class="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
+                    <li><a>Home</a></li>
                     <li tabindex="0">
                       <details>
-                        <summary>Parent</summary>
+                        <summary>Services</summary>
                         <ul class="p-2">
                           <li><a>Submenu 1</a></li>
                           <li><a>Submenu 2</a></li>
                         </ul>
                       </details>
                     </li>
-                    <li><a>Item 3</a></li>
+                    <li><a>Cases</a></li>
+                    <li><a>About Us</a></li>
+                    <li><a>Contact Us</a></li>
                   </ul>
                 </div>
                 <div class="navbar-end">
-                  <a class="btn">Button</a>
+                  <a class="btn bg-sonali hover:bg-sonali text-white">Free Consultation</a>
                 </div>
               </div>
 
           </nav>
+          <div class="hero bg-[url('/images/banner.png')] py-24 px-60 bg-cover lg:h-[550px]">
+            <div class="hero-content text-center">
+              <div class="max-w-2xl">
+                <h1 class="text-5xl font-bold text-white">We Provide Effective Legal Solutions</h1>
+                <p class="py-6 text-white">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                
+                <div>
+                    <input type="text" placeholder="Search your service" class="input input-bordered w-full max-w-xs" />
+                    <button class="btn bg-sonali border-0 hover:bg-sonali text-white">Search</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </header>
-    <main>
+    <main class="container mx-auto">
+
+        <section class="text-gray-600 body-font">
+            <div class=" px-5 py-24 ">
+              <div class="text-center mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">The Legal Practice Area</h1>
+                <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+            <div class="grid mt-8 grid-cols-1 justify-center md:grid-cols-2 lg:grid-cols-3">
+              <!--  card 1 -->
+
+                <div class="flex flex-col justify-center space-y-4 bg-white lg:w-[400px] h-[500px] ">
+                    <div class="mx-auto flex">
+                        <img class="" src="./images/business.png" alt="">
+                    </div>
+                    <h3 class="text-2xl font-semibold">Business low</h3>
+                    <p class="w-64 m-auto">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                    <img class="w-10 mx-auto" src="./images/Frame.png" alt="">
+                </div>
+                <!-- card-2 -->
+                <div class="flex flex-col justify-center space-y-4 border-2 bg-gradient-to-b from-slate-100 lg:w-[400px] h-[500px] ">
+                    <div class="mx-auto flex">
+                        <img class="" src="./images/business.png" alt="">
+                    </div>
+                    <h3 class="text-2xl font-semibold">Business low</h3>
+                    <p class="w-64 m-auto">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                    <img class="w-10 mx-auto" src="./images/Frame.png" alt="">
+                </div>
+                <!-- card 3 -->
+
+                <div class="flex flex-col justify-center space-y-4 bg-white lg:w-[400px] h-[500px] ">
+                  <div class="mx-auto flex">
+                      <img class="" src="./images/business.png" alt="">
+                  </div>
+                  <h3 class="text-2xl font-semibold">Business low</h3>
+                  <p class="w-64 m-auto">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                  <img class="w-10 mx-auto" src="./images/Frame.png" alt="">
+              </div>
+
+            </div>
+          </section>
 
     </main>
     <footer>
